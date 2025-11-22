@@ -1,0 +1,66 @@
+{% extends 'user.html' %}
+{% block content %}
+
+			<div class="row">
+				<div class="col-lg-8 col-md-12">
+					<div class="cart-table-wrap">
+						<table class="cart-table">
+							<thead class="cart-table-head">
+								<tr class="table-head-row">
+									<th class="product-remove"></th>
+									<th class="product-image">Product Image</th>
+									<th class="product-name">Name</th>
+									<th class="product-price">Price</th>
+									<th class="product-price">Category</th>
+									<th class="product-quantity">Quantity</th>
+									<th class="product-total">Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for i in cart %}
+								<tr class="table-body-row">
+									<td class="product-remove"><a href="/deleted/{{ i.id }}"><i class="far fa-window-close"></i></a></td>
+									<td class="product-image"><img src="{{i.cartproduct.image.url}}" alt=""></td>
+									<td class="product-name">{{i.cartproduct.product}}</td>
+									<td class="product-price">{{i.cartproduct.price}}</td>
+									<td class="product-quantity">{{i.cartproduct.category}}</td>
+									<td class="product-quantity">{{i.quantity}}
+									<td class="product-total">{{i.total}}</td>
+								</tr>
+								
+								{% endfor %}
+								
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="total-section">
+						<table class="total-table">
+							<thead class="total-table-head">
+								<tr class="table-total-row">
+									<th>Total</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								
+								
+								<tr class="total-data">
+									<td><strong>Total: </strong>${{a.total_sum}}</td>
+									
+								</tr>
+							</tbody>
+						</table>
+						<div class="cart-buttons">
+							
+							<a href="{% url 'checkout' %}" class="boxed-btn black">Check Out</a>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+            {% endblock %}

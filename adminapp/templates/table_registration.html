@@ -1,0 +1,31 @@
+{% extends 'adminapp.html' %}
+{% block content %}
+                  <div class="card-header">
+                    <div class="card-title">Registration Table</div>
+                  </div>
+                  <div class="card-body">
+                   
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                         
+                            <th>username</th>
+                            <th> email</th>
+                            <th>phone</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in register %}
+                            <tr>
+                                <td>{{ i.username}}</td>
+                                <td>{{ i.email}}</td>
+                                <td>{{ i.phone}}</td>
+                            </tr>
+                          {% endfor %}
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  {% endblock %}

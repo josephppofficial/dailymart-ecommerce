@@ -1,0 +1,36 @@
+{% extends 'adminapp.html' %}
+{% block content %}
+                  <div class="card-header">
+                    <div class="card-title">orders Table</div>
+                  </div>
+                  <div class="card-body">
+                    
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Product Image</th>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in order%}
+                            <tr>
+                                <td><img src="{{i.checkoutcart.cartproduct.image.url }}" alt="" style="width: 100px; height: 100px;"></td>
+                                <td>{{ i.usercheckout.username }}</td>
+                                <td>{{i.usercheckout.email}}</td>
+                                <td>{{i.usercheckout.phone}}</td>
+                                <td>{{i.checkoutcart.cartproduct.product}}</td>
+                                <td>{{i.checkoutcart.quantity}}</td>
+                            </tr>
+                          {% endfor %}
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  {% endblock %}

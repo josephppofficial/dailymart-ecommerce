@@ -1,0 +1,30 @@
+{% extends 'user.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="product-filters">
+			
+		</div>
+	</div>
+</div>
+
+<div class="row product-lists" style="position: relative; height: 1147.4px;">
+	{% for i in success %}
+	<div class="col-lg-4 col-md-6 text-center strawberry" style="position: absolute; left: 0px; top: 0px;">
+		<div class="single-product-item">
+			<div class="product-image">
+				<a href="single-product.html"><img src={{i.checkoutcart.cartproduct.image.url}} alt=""style="width: 200px; height: 200px;"></a>
+			</div>
+			<h3>{{i.usercheckout.username}}</h3>
+			<h4>{{i.usercheckout.email}}</h4>
+			<h5>{{i.checkoutcart.cartproduct.product}}</h5>
+			<p> phone: {{i.usercheckout.phone}}</p>
+			<p>quantity:{{i.checkoutcart.quantity}}</p>
+		</div>
+	</div>
+	{% endfor %}	
+					</div>
+                   
+                    {% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'user.html' %}
+{% load static %}
+{% block content %}
+			<div class="row">
+				<div class="col-md-5">
+					<div class="single-product-img">
+						{% for i in data %}
+						<img src={{i.image.url}} alt="" style="width: 200px; height: 200px;">
+					</div>
+				</div>
+				<form action="{% url 'cart_data' i.id %}" method="post">
+					{% csrf_token %}
+				<div class="col-md-7">
+					<div class="single-product-content">
+						<h3>{{ i.product }}</h3>
+						<p class="single-product-pricing"><span>{{i.category}}</span> ${{i.price}}</p>
+							
+					</div>
+						<div class="coupon-form-wrap">
+							
+									<input type="number" name="quantity" id="quantity" value= "1" min="1" max="100">
+									<input type="hidden" id="price" value="{{i.price}}">
+									<input type="text" id="total" name="total" value="{{i.price}}">
+								
+								</p>
+					 
+						</div>
+				</div>
+				<button type="submit" class="cart-btn"><i class="fas fa-shopping-cart">Add to cart</i> </button> 
+				</form>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('#quantity').on('change', function(){
+                var quantity=$('#quantity').val();
+                var price=$('#price').val();
+                var total=parseInt(quantity)*parseInt(price);
+                $('#total').val(total);
+            })
+        })
+    </script>
+				
+				{% endfor %}
+			</div>
+            {% endblock %}

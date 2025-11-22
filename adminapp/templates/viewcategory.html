@@ -1,0 +1,36 @@
+{% extends 'adminapp.html' %}
+{% block content %}
+                  <div class="card-header">
+                    <div class="card-title">category Table</div>
+                  </div>
+                  <div class="card-body">
+                    
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                         
+                            <th>category</th>
+                            <th>description</th>
+                            <th>image</th>
+                            <th>edit</th>
+                            <th>delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in data %}
+                          <tr>
+                           
+                            <td>{{ i.category}}</td>
+                            <td>{{ i.description}}</td>
+                            <td><img src="{{ i.image.url }}" alt="Image" style="width: 50px; height: auto;"></td>
+                            <td><a href="/edit/{{ i.id }}">Edit</a></td>
+                            <td><a href="/delete/{{ i.id }}">Delete</a></td>
+                          </tr>
+                          {% endfor %}
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  {% endblock %}

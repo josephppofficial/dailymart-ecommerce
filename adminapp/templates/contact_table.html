@@ -1,0 +1,36 @@
+{% extends 'adminapp.html' %}
+{% block content %}
+                  <div class="card-header">
+                    <div class="card-title">contact Table</div>
+                  </div>
+                  <div class="card-body">
+                   
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                         
+                            <th>yourname</th>
+                            <th>youremail</th>
+                            <th>phone</th>
+                            <th>subject</th>
+                            <th>message</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in feedback %}
+                          <tr>
+                           
+                            <td>{{ i.yourname}}</td>
+                            <td>{{ i.youremail}}</td>
+                            <td>{{ i.phone}}</td>
+                            <td>{{ i.subject}}</td>
+                            <td>{{ i.message}}</td>
+                          </tr>
+                          {% endfor %}
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  {% endblock %}

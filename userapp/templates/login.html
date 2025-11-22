@@ -1,0 +1,23 @@
+{% extends 'user.html' %}
+{% block content %}
+			<div class="row">
+				<div class="col-lg-8 mb-5 mb-lg-0">{{msg}}
+					<form action="{% url 'publicdata' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+					<div class="form-title">
+						<h2></h2>
+					</div>
+				 	<div id="form_status"></div>
+					<div class="registration-form">
+						<form type="POST" id="fruitkha-contact" onsubmit="return valid_datas( this );">
+							<p>
+								<input type="text" placeholder="UserName" name="username" id="username"><br>
+								<input type="password" placeholder="Password" name="password" id="password">
+							</p>
+							<p><input type="submit" value="Submit"></p>
+						</form>
+					</div>
+				</div>
+			
+			</div>
+			{% endblock %}

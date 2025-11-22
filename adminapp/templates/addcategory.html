@@ -1,0 +1,19 @@
+{% extends 'adminapp.html' %}
+{% block content %}
+<form action="{% url 'category_data' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="image">
+                        <div class="form-group">
+                            <label for="category name">Category name</label>
+                            <input type="category" class="form-control" id="category" name="category" placeholder="Category name">
+                          </div>
+                          <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="description" class="form-control" id="description" name="description"  placeholder="Description">
+                          </div>
+                          <div class="card-action">  
+                          <button class="btn btn-success">Submit</button>
+                          </div>
+                          </div>
+</form>
+                          {% endblock %}
