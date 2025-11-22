@@ -1,0 +1,81 @@
+.cart-table-wrap {
+    margin: 20px 0; /* Adjust the margin as needed */
+    max-height: 500px; /* Adjust the height as needed */
+    overflow-y: auto; /* Adds a scrollbar if content overflows */
+    margin-left: 13px;
+    
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table-head {
+    background-color: #f4f4f4; /* Adjust the background color as needed */
+}
+
+.table-head-row th {
+    padding: 10px; /* Adjust the padding as needed */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+}
+
+.table-body-row td {
+    padding: 10px; /* Adjust the padding as needed */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+}
+
+.product-remove a {
+    color: #ff0000; /* Adjust the color as needed */
+    text-decoration: none;
+}
+
+.product-remove a:hover {
+    color: #cc0000; /* Adjust the hover color as needed */
+}
+
+.product-image img {
+    max-width: 100px; /* Adjust the image width as needed */
+    height: auto;
+}
+
+.total-section {
+    margin-top: 20px; /* Adjust the margin as needed */
+    width: 160px;
+}
+
+.total-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.total-table-head {
+    background-color: #f4f4f4; /* Adjust the background color as needed */
+}
+
+.table-total-row th {
+    padding: 10px; /* Adjust the padding as needed */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+}
+
+.total-data td {
+    padding: 10px; /* Adjust the padding as needed */
+}
+
+.cart-buttons {
+    margin-top: 20px; /* Adjust the margin as needed */
+    text-align: center;
+}
+
+.cart-buttons .boxed-btn {
+    padding: 10px 20px; /* Adjust the padding as needed */
+    background-color: rgb(245, 169, 7); /* Adjust the background color as needed */
+    color: #fff;
+    text-decoration: none;
+}
+
+.cart-buttons .boxed-btn:hover {
+    background-color: rgb(235, 150, 23); /* Adjust the hover background color as needed */
+}

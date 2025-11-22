@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Form Title */
+.form-title {
+    margin-bottom: 30px;
+}
+
+.form-title h2 {
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 16px;
+}
+
+.form-title p {
+    color: #666;
+    margin-left: 16px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #fffdfd;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 5 2px 4px rgba(0, 0, 0, 0.1);
+    width: 418px;
+margin-left: 15px;
+margin-bottom: 15px;
+
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    background: #f09a3ded;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #4cae4c;
+}
+
+/* Contact Info Box Styles */
+.contact-form-wrap {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-top: 80px;
+}
+
+.contact-form-box {
+    margin-bottom: 30px;
+}
+
+.contact-form-box h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-form-box p {
+    color: #666;
+    margin: 0;
+}
+
+.contact-form-box i {
+    color: #5cb85c;
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-lg-8, .col-lg-4 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .col-lg-8 {
+        margin-bottom: 30px;
+    }
+}

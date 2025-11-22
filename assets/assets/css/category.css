@@ -1,0 +1,79 @@
+.card-header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-sub {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .table-responsive {
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+  
+  .table th,
+  .table td {
+    padding: 1rem; /* Adjust padding as needed */
+    vertical-align: middle; /* Center content vertically */
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+  
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+  
+  .table-bordered thead th,
+  .table-bordered thead td {
+    border-bottom-width: 2px;
+  }
+  
+  img {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
